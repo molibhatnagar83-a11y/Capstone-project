@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import json
-import re
 from google import genai
 from google.genai import types
 
@@ -36,11 +34,11 @@ if "history" not in st.session_state:
 def get_client():
 
     return genai.Client(
-        api_key=st.secrets["API_KEY"]
+        api_key=st.secrets["GEMINI_API_KEY"]
     )
 
 
-client = get_client()
+client = get_client(api_key="GEMINI_API_KEY")
 
 
 # =========================================================
