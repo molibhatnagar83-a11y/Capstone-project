@@ -38,7 +38,7 @@ def get_client():
     )
 
 
-client = get_client(api_key="GEMINI_API_KEY")
+client = get_client()
 
 
 # =========================================================
